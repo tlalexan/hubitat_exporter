@@ -24,7 +24,7 @@ fn main() {
                         .arg(Arg::with_name("he_ip").short('h').long("hubitat_ip").env("HE_IP").required(true))
                         .arg(Arg::with_name("he_api_id").short('i').long("hubitat_api_id").env("HE_API_ID").required(true))
                         .arg(Arg::with_name("he_api_token").short('t').long("hubitat_api_access_token").env("HE_API_TOKEN").required(true))
-                        .arg(Arg::with_name("he_dd").short('d').long("hubitat_device_details").env("HE_DD").default_value("true").required(false))
+                        .arg(Arg::with_name("he_dd").short('d').long("hubitat_device_details").env("HE_DD").takes_value(false).required(false))
                         .arg(Arg::with_name("he_auth_usr").short('u').long("hubitat_auth_usr").env("HE_AUTH_USR").required(false))
                         .arg(Arg::with_name("he_auth_pwd").short('p').long("hubitat_auth_pwd").env("HE_AUTH_PWD").requires("he_auth_usr").required(false))
                         .arg(Arg::with_name("v").short('v').multiple(true).takes_value(false).required(false))
